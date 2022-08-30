@@ -43,7 +43,7 @@ exports.handler = async (event) => {
             }
         },
         FilterExpression: "#NM = :a",
-        ProjectionExpression: "#NM",city,
+        ProjectionExpression: "#NM,city",
         TableName: "HelloWorldTable"
     };
     let ddbResponse = await ddb.scan(params, function(err, data) {
